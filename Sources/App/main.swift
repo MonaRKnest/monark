@@ -1,6 +1,11 @@
 import Vapor
+import VaporMongo
 
 let drop = Droplet()
+//try drop.addProvider(VaporMongo.Provider.self)
+
+let mongo = try VaporMongo.Provider(database: "monarkdb", user: "admin", password: "admin")
+drop.addProvider(mongo)
 
 drop.get { req in
     let lang = req.headers["Accept-Language"]?.string ?? "en"
