@@ -5,7 +5,7 @@ let drop = Droplet()
 
 do {
     // Connect to the MongoDB server
-    let mongoDatabase = try Database(mongoURL: "mongodb://localhost/mydatabase")
+    let mongoDatabase = try Database(mongoURL: "mongodb://admin88:88admin@ds137749.mlab.com:37749/monark")
     // Select a database and collection
     let users = mongoDatabase["users"]
     
